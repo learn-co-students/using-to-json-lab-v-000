@@ -765,3 +765,68 @@ Processing by ProductsController#inventory as */*
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-21 00:59:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Corey/.rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 60ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2016-04-21 01:00:14 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 617ms (Views: 610.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1" for ::1 at 2016-04-21 01:00:15 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 52ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1.json" for ::1 at 2016-04-21 01:00:23 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1.json" for ::1 at 2016-04-21 01:01:48 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/1" for ::1 at 2016-04-21 01:03:50 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 149ms (Views: 127.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/2.json" for ::1 at 2016-04-21 01:03:54 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2.json" for ::1 at 2016-04-21 01:03:56 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2.json" for ::1 at 2016-04-21 01:04:01 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms)
