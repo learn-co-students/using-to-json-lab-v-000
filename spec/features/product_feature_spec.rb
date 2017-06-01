@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 
 RSpec.describe "Products", type: :feature do
   before do
