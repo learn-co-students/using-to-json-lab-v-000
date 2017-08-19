@@ -5,18 +5,20 @@
 <p class="productDescription"><%= @product.description %></p>
 
 <script type="text/javascript" charset="utf-8">
-$(function () {
-  $(".js-next").on("click", function() {
-    var nextId = parseInt($(".js-next").attr("data-id")) + 1;
-    $.get("/products/" + nextId + "/data", function(data) {
-      $(".productName").text(data["name"]);
-      $(".productPrice").text(data["price"]);
-      $(".productDescription").text(data["description"]);
-      $(".productInventory").text(data["inventory"]);
+  function getNextProduct(e) {
+    e.preventDefault();
+    const currentID = parseFloat(this.dataset.id);
+    const nextId = currentID + 1;
+    const ohjquery = this;
+    $.get("/products/" + nextId + ".json", function(data) {
+      document.querySelector('.productName').textContent = data.name;
+      document.querySelector('.productPrice').textContent = data.price;
+      document.querySelector('.productDescription').textContent = data.description;
+      document.querySelector('.productInventory').textContent = data.inventory;
       // re-set the id to current on the link
-      $(".js-next").attr("data-id", data["id"]);
+      ohjquery.dataset.id = data.id;
     });
-  });
-});
-</script>
+  }
 
+  document.querySelector('.js-next').addEventListener('click', getNextProduct);
+</script>
