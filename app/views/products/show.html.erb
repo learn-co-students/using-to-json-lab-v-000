@@ -5,20 +5,20 @@
 <p class="productDescription"><%= @product.description %></p>
 
 <script type="text/javascript" charset="utf-8">
-$(function () {
-  $(".js-next").on("click", function(e) {
+  function getNextProduct(e) {
     e.preventDefault();
-    const link = document.querySelector('.js-next');
-    const currentID = parseFloat(link.dataset.id);
+    const currentID = parseFloat(this.dataset.id);
     const nextId = currentID + 1;
+    const ohjquery = this;
     $.get("/products/" + nextId + ".json", function(data) {
       document.querySelector('.productName').textContent = data.name;
       document.querySelector('.productPrice').textContent = data.price;
       document.querySelector('.productDescription').textContent = data.description;
       document.querySelector('.productInventory').textContent = data.inventory;
       // re-set the id to current on the link
-      link.dataset.id = data.id;
+      ohjquery.dataset.id = data.id;
     });
-  });
-});
+  }
+
+  document.querySelector('.js-next').addEventListener('click', getNextProduct);
 </script>
