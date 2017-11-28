@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'poltergeist'
 
 gem 'pry'
 gem 'pry-nav'
