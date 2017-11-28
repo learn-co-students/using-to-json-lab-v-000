@@ -22,13 +22,19 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
+#       respond_to do |format|
+#       format.html { render :show }
+#       format.json { render json: @post.to_json(only: [:title, :description, :id],
+#                               include: [author: { only: [:name]}]) }
+#     end
+
+
   def show
     @product = Product.find(params[:id])
-  end
-
-  def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
+    respond_to do |format|
+      format.html {render :show}
+      format.json {render json: @product.to_json(only: [:id, :name, :price, :inventory, :description])}
+    end
   end
 
   private
