@@ -24,11 +24,12 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-  end
-
-  def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @product.to_json(
+        only: [:id, :name, :description, :inventory, :price]
+      ) }
+    end
   end
 
   private
@@ -36,4 +37,5 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :description, :inventory, :price)
   end
+
 end
