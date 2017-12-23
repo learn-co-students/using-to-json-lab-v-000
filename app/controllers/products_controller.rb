@@ -3,6 +3,14 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def show
+    @product = Product.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @product.to_json(only: [:id, :name, :description, :inventory, :price])}
+    end
+  end
+
   def inventory
     product = Product.find(params[:id])
     render plain: product.inventory > 0 ? true : false
@@ -21,15 +29,15 @@ class ProductsController < ApplicationController
     Product.create(product_params)
     redirect_to products_path
   end
-
-  def show
-    @product = Product.find(params[:id])
-  end
-
-  def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
-  end
+  # 
+  # def show
+  #   @product = Product.find(params[:id])
+  # end
+  #
+  # def data
+  #   product = Product.find(params[:id])
+  #   render json: ProductSerializer.serialize(product)
+  # end
 
   private
 
