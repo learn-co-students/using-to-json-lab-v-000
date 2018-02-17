@@ -765,3 +765,178 @@ Processing by ProductsController#inventory as */*
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/" for ::1 at 2018-02-17 06:54:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (2.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 565ms (Views: 533.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/store_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/assets/store_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-02-17 06:54:25 -0500
+
+
+Started GET "/products" for ::1 at 2018-02-17 06:54:29 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/description" for ::1 at 2018-02-17 06:54:31 -0500
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 29ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/inventory" for ::1 at 2018-02-17 06:54:31 -0500
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for ::1 at 2018-02-17 06:54:35 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2" for ::1 at 2018-02-17 06:54:37 -0500
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for ::1 at 2018-02-17 06:54:39 -0500
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2" for ::1 at 2018-02-17 06:54:40 -0500
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for ::1 at 2018-02-17 06:55:18 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/store_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/store_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2018-02-17 06:55:18 -0500
+
+
+Started GET "/products/2" for ::1 at 2018-02-17 06:55:20 -0500
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for ::1 at 2018-02-17 06:56:37 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/store_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/store_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-02-17 06:56:37 -0500
+
+
+Started GET "/products/2.json" for ::1 at 2018-02-17 06:56:38 -0500
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
