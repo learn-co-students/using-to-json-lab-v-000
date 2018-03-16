@@ -765,3 +765,39 @@ Processing by ProductsController#inventory as */*
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-16 11:45:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/leigh/code/labs/RailsandJavaScript/using-to-json-lab-v-000/app/controllers/products_controller.rb:29: syntax error, unexpected ( arg, expecting '}'
+...render json: @product.to_json (only: [:id, :name, :descripti...
+...                               ^
+/home/leigh/code/labs/RailsandJavaScript/using-to-json-lab-v-000/app/controllers/products_controller.rb:29: syntax error, unexpected ')', expecting '}'
+...scription, :inventory, :price])}
+...                               ^
+/home/leigh/code/labs/RailsandJavaScript/using-to-json-lab-v-000/app/controllers/products_controller.rb:43: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/products_controller.rb:29: syntax error, unexpected ( arg, expecting '}'
+  app/controllers/products_controller.rb:29: syntax error, unexpected ')', expecting '}'
+  app/controllers/products_controller.rb:43: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (52.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-16 11:47:30 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 420ms (Views: 413.3ms | ActiveRecord: 1.2ms)
