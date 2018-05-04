@@ -22,8 +22,12 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
-  def show
+def show
     @product = Product.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @product.to_json(only: [:name, :description, :inventory, :price]) }
+    end
   end
 
   def data
