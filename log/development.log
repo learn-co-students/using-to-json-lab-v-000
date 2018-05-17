@@ -765,3 +765,348 @@ Processing by ProductsController#inventory as */*
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-05-16 18:33:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/nicole/using-to-json-lab-v-000/app/controllers/products_controller.rb:30: syntax error, unexpected keyword_end, expecting '}'
+/home/nicole/using-to-json-lab-v-000/app/controllers/products_controller.rb:43: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/products_controller.rb:30: syntax error, unexpected keyword_end, expecting '}'
+  app/controllers/products_controller.rb:43: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (83.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-05-16 18:34:22 -0700
+
+SyntaxError (/home/nicole/using-to-json-lab-v-000/app/controllers/products_controller.rb:30: syntax error, unexpected keyword_end, expecting '}'
+/home/nicole/using-to-json-lab-v-000/app/controllers/products_controller.rb:44: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/products_controller.rb:30: syntax error, unexpected keyword_end, expecting '}'
+  app/controllers/products_controller.rb:44: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (8.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-05-16 18:34:43 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 1831ms (Views: 1763.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2/data" for 127.0.0.1 at 2018-05-16 18:34:49 -0700
+Processing by ProductsController#data as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2/data" for 127.0.0.1 at 2018-05-16 18:34:50 -0700
+Processing by ProductsController#data as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2/data" for 127.0.0.1 at 2018-05-16 18:34:51 -0700
+Processing by ProductsController#data as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/data" for 127.0.0.1 at 2018-05-16 18:34:57 -0700
+Processing by ProductsController#data as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-05-16 18:36:35 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 57ms (Views: 36.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:37 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xad57ca8>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (34.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.1ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:38 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0x8f23584>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (31.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.4ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:39 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xb533dca8>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (56.0ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:39 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xb48fa980>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (3.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (29.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (7.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (10.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (120.4ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:39 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (3.8ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 3.8ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xb3965204>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (22.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (59.9ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:40 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xb5021024>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.7ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:40 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xb3a41358>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (22.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (75.6ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:36:40 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xb502b1b4>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (32.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (12.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (8.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.4ms)
+
+
+Started GET "/products/1.json" for 127.0.0.1 at 2018-05-16 18:37:04 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `product' for #<ProductsController:0xad465ac>
+Did you mean?  @product):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.0ms)
+
+
+Started GET "/products/1.json" for 127.0.0.1 at 2018-05-16 18:37:23 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1.html" for 127.0.0.1 at 2018-05-16 18:37:27 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2018-05-16 18:37:31 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
