@@ -24,12 +24,16 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render :json => @product.to_json(:except => [:created_at]) }
+    end
   end
 
-  def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
-  end
+  # def data
+  #   product = Product.find(params[:id])
+  #   render json: ProductSerializer.serialize(product)
+  # end
 
   private
 
