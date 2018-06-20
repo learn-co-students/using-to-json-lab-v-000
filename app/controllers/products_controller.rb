@@ -26,14 +26,9 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     respond_to do |f|
       f.html {render :show}
-      f.json {render json: @product.to_json}
+      f.json {render json: @product.to_json(except: [:created_at])}
     end
   end
-
-  #def data
-  #  product = Product.find(params[:id])
-  #  render json: product.to_json(only: [:id, :name, :description, :inventory, :price])
-  #end
 
   private
 
