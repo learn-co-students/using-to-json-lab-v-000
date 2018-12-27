@@ -18,17 +18,28 @@ class ProductsController < ApplicationController
   end
 
   def create
-    Product.create(product_params)
-    redirect_to products_path
+    @product = Product.new(product_params)
+    if @product.save
+      redirect_to products_path
+    else
+      render :new
+    end
   end
 
   def show
     @product = Product.find(params[:id])
+
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @product.to_json(only: [:id, :name, :description, :inventory, :price])}
+    end
   end
 
   def data
     product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
+    render :show
+    # render json: product.to_json(only: [:id, :name, :description, :inventory, :price])
+    # render json: ProductSerializer.serialize(product)
   end
 
   private
