@@ -36,3 +36,5 @@ private
     params.require(:product).permit(:name, :description, :inventory, :price)
   end
 end
+
+# comment for pull request issue
