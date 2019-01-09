@@ -4,9 +4,23 @@
 <p class="productPrice"><%= @product.price %></p>
 <p class="productDescription"><%= @product.description %></p>
 
-
-<%# This does not work %>
 <script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".js-next").on("click", function() {
+    var nextId = parseInt($(".js-next").attr("data-id")) + 1;
+    $.get("/products/" + nextId + ".json", function(data) {
+      $(".productName").text(data["name"]);
+      $(".productPrice").text(data["price"]);
+      $(".productDescription").text(data["description"]);
+      $(".productInventory").text(data["inventory"]);
+      // re-set the id to current on the link
+      $(".js-next").attr("data-id", data["id"]);
+    });
+  });
+});
+</script>
+<%# This does not work %>
+<%# <script type="text/javascript" charset="utf-8">
 $(function () {
   event.preventDefault()
   $(".js-next").on("click", function() {
@@ -21,5 +35,5 @@ $(function () {
     });
   });
 });
-</script>
+</script> %>
 
