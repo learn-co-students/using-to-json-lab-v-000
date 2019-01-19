@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def inventory
     product = Product.find(params[:id])
-    render plain: product.inventory > 0 ? true : false
+    render plain: product.inventory > 0
   end
 
   def description
@@ -24,11 +24,14 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-  end
-
-  def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
+    respond_to do |format|
+      format.html { render :show }
+      format.json do
+        # `%i` --> Non-interpolated Array of symbols, separated by whitespace
+        # https://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Literals
+        render json: @product.to_json(only: %i[name description id inventory price])
+      end
+    end
   end
 
   private
