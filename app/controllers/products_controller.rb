@@ -4,12 +4,12 @@ class ProductsController < ApplicationController
   end
 
   def inventory
-    product = Product.find(params[:id])
+    product = set_product
     render plain: product.inventory > 0 ? true : false
   end
 
   def description
-    product = Product.find(params[:id])
+    product = set_product
     render plain: product.description
   end
 
@@ -23,17 +23,26 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = set_product
+    respond_to do |format|
+      format.html {render :show}
+      format.json {render json: @product.to_json(only: [:id, :name, :description, :inventory, :price])}
+    end
   end
 
-  def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
-  end
+  # this code now in show action with to_json method
+  # def data
+  #   product = Product.find(params[:id])
+  #   render json: ProductSerializer.serialize(product)
+  # end
 
   private
-
+  
   def product_params
     params.require(:product).permit(:name, :description, :inventory, :price)
+  end
+
+  def set_product
+    @product = Product.find(params[:id])
   end
 end
