@@ -5,10 +5,11 @@
 <p class="productDescription"><%= @product.description %></p>
 
 <script type="text/javascript" charset="utf-8">
-$(function () 
-  $(".js-next").on("click", function(event)
+$(function (){
+  $(".js-next").on("click", function(event){
     var nextId = parseInt($(".js-next").attr("data-id")) + 1;
-    $.get("/products/" + nextId + "/data", function(data) {
+    //  this is a URL line 11
+    $.get("/products/" + nextId + ".json", function(data) {
       $(".productName").text(data["name"]);
       $(".productPrice").text(data["price"]);
       $(".productDescription").text(data["description"]);
