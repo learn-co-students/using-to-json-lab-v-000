@@ -1,15 +1,17 @@
 class ProductsController < ApplicationController
-    before_action :set_product, only: %i[new show inventory description]
+    before_action :set_product, only: [:new, :show]
     def index
         @products = Product.all
     end
 
     def inventory
-        render plain: @product.inventory > 0 ? true : false
+      product = Product.find(params[:id])
+      render plain: product.inventory > 0 ? true : false
     end
 
     def description
-        render plain: @product.description
+      product = Product.find(params[:id])
+      render plain: product.description
     end
 
     def new
