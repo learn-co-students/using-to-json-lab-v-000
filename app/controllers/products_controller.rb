@@ -34,7 +34,8 @@ class ProductsController < ApplicationController
     product = Product.find(params[:id])
     render json: product.to_json(only: [:name, :description, :inventory, :price, :id])
   end
-
+  
+  
   private
 
   def product_params
