@@ -7,13 +7,11 @@ RSpec.describe ProductsController, type: :controller do
   end
 
   describe "POST create" do
-
     it 'creates a new product' do
       post :create, product: @product_attributes
       expect(response).to redirect_to(products_path)
       expect(Product.count).to eq 1
     end
-
   end
 
   describe "GET inventory" do
@@ -46,5 +44,4 @@ RSpec.describe ProductsController, type: :controller do
       expect(body["created_at"]).to eq nil
     end
   end
-
 end
