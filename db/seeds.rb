@@ -5,12 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Product.delete_all
+Order.delete_all
+Customer.delete_all
+Invoice.delete_all
+
 products = ["tv", "vcr", "macbook", "macbook air", "mouse", "chair", "desk", "lamp", "water bottle"]
 
 10.times do
   products = ["tv", "vcr", "macbook", "macbook air", "mouse", "chair", "desk", "lamp", "water bottle"]
-  Product.create(:name => products.sample, :price => Faker::Number.between(1,1500))
+  Product.create(:name => products.sample, :price => Faker::Number.between(1,1500), :inventory => 1, :description => "very nice product. Would be great to have some more.")
 end
+
 5.times do
   Customer.create(:name => Faker::Name.name)
 end
