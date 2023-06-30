@@ -1,23 +1,20 @@
-<h1>Products</h1>
-<% @products.each do |product| %>
-  <h3><%= product.name %></h3>
-  <div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
-  <button class="js-more" data-id="<%= product.id %>">More Info</button>
-<% end %>
+<a href="#" class="js-next" data-id="<%= @product.id %>">Next Product</a>
+<h1 class="productName"><%= @product.name %></h1>
+<p class="productInventory"><%= @product.inventory %></p>
+<p class="productPrice"><%= @product.price %></p>
+<p class="productDescription"><%= @product.description %></p>
 
 <script type="text/javascript" charset="utf-8">
-$(function() {
-  $(".js-more").on("click", function() {
-    var id = $(this).data("id");
-    $.get("/products/" + id + "/description", function(description) {
-      $.get("/products/" + id + "/inventory", function(inventory) {
-        var inventoryText = "<strong>Available</strong>";
-        if(inventory === "false"){
-          inventoryText = "<strong>Sold Out</strong>";
-        }
-        var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
-        $("#product-" + id).html(descriptionText);
-      });
+$(function () {
+  $(".js-next").on("click", function() {
+    var nextId = parseInt($(".js-next").attr("data-id")) + 1;
+    $.get("/products/" + nextId + ".json", function(data) {
+      $(".productName").text(data["name"]);
+      $(".productPrice").text(data["price"]);
+      $(".productDescription").text(data["description"]);
+      $(".productInventory").text(data["inventory"]);
+      // re-set the id to current on the link
+      $(".js-next").attr("data-id", data["id"]);
     });
   });
 });
