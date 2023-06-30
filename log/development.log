@@ -765,3 +765,283 @@ Processing by ProductsController#inventory as */*
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2018-09-13 12:18:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 34ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:18:29 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 1143ms (Views: 1114.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/1/description" for ::1 at 2018-09-13 12:18:39 -0400
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/inventory" for ::1 at 2018-09-13 12:18:39 -0400
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/description" for ::1 at 2018-09-13 12:18:41 -0400
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/inventory" for ::1 at 2018-09-13 12:18:41 -0400
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/description" for ::1 at 2018-09-13 12:18:42 -0400
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/inventory" for ::1 at 2018-09-13 12:18:42 -0400
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/data" for ::1 at 2018-09-13 12:21:30 -0400
+Processing by ProductsController#data as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 29ms (Views: 1.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:25:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+... @post.to_json(only: id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:35: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:43: syntax error, unexpected end-of-input, expecting '}'):
+  app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:35: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:43: syntax error, unexpected end-of-input, expecting '}'
+
+
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (133.3ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1128.9ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1256.5ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:26:39 -0400
+
+SyntaxError (/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+...@post.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:35: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:43: syntax error, unexpected end-of-input, expecting '}'):
+  app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:35: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:43: syntax error, unexpected end-of-input, expecting '}'
+
+
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.9ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (89.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (211.5ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:26:50 -0400
+
+SyntaxError (/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+...@post.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting '}'):
+  app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting '}'
+
+
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.9ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (95.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (211.2ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:27:57 -0400
+
+SyntaxError (/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting '}'):
+  app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting '}'
+
+
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (160.9ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (161.8ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (379.7ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:29:46 -0400
+
+SyntaxError (/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting '}'):
+  app/controllers/products_controller.rb:29: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting '}'
+
+
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (99.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (221.3ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:32:58 -0400
+
+SyntaxError (/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+...oduct.to_json(only: :id, :name, :description, :inventory, :p...
+...                               ^
+/Users/Miriam/Development/railsJS/using-to-json-lab-v-000/app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/products_controller.rb:36: syntax error, unexpected ',', expecting =>
+  app/controllers/products_controller.rb:44: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (143.9ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (115.3ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Miriam/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (244.2ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:33:04 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.1ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 522ms (Views: 505.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/1/description" for ::1 at 2018-09-13 12:33:09 -0400
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 31ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/inventory" for ::1 at 2018-09-13 12:33:09 -0400
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/description" for ::1 at 2018-09-13 12:33:11 -0400
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/inventory" for ::1 at 2018-09-13 12:33:11 -0400
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2018-09-13 12:33:12 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms)
