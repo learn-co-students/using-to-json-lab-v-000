@@ -23,12 +23,11 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
-  end
-
-  def data
-    product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product)
+    @product=Product.find(params[:id])
+    respond_to do |format|
+      format.html { render :'show' }
+      format.json { render json: ProductSerializer.serialize(@product)  }
+    end
   end
 
   private
