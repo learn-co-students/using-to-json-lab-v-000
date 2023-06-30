@@ -1,3 +1,4 @@
+=begin
 class ProductSerializer
   def self.serialize(product)
     serialized_product = '{'
@@ -11,3 +12,4 @@ class ProductSerializer
     serialized_product += '}'
   end
 end
+=end
